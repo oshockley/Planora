@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/Planora/static/css/main.9563ede0.css",
+    "main.js": "/Planora/static/js/main.e3486020.js",
+    "index.html": "/Planora/index.html",
+    "main.9563ede0.css.map": "/Planora/static/css/main.9563ede0.css.map",
+    "main.e3486020.js.map": "/Planora/static/js/main.e3486020.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9563ede0.css",
+    "static/js/main.e3486020.js"
+  ]
+}
