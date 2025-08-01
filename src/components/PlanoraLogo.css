@@ -1,0 +1,119 @@
+.planora-logo {
+  display: inline-block;
+  position: relative;
+}
+
+.planora-logo.animated .airplane {
+  animation: orbitRotation 8s linear infinite;
+  transform-origin: 50px 50px;
+}
+
+.planora-logo.animated .orbit-path {
+  animation: orbitGlow 4s ease-in-out infinite alternate;
+}
+
+.planora-logo.animated .contrail {
+  animation: contrailFlow 2s ease-in-out infinite;
+}
+
+/* Airplane orbiting around Earth */
+@keyframes orbitRotation {
+  0% {
+    transform: rotate(0deg) translateX(40px) rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg) translateX(40px) rotate(-360deg);
+  }
+}
+
+/* Orbit path glow effect */
+@keyframes orbitGlow {
+  0% {
+    opacity: 0.2;
+    stroke-width: 1;
+  }
+  100% {
+    opacity: 0.6;
+    stroke-width: 1.5;
+  }
+}
+
+/* Contrail animation */
+@keyframes contrailFlow {
+  0% {
+    opacity: 0.6;
+    transform: scaleX(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scaleX(0.8);
+  }
+  100% {
+    opacity: 0.6;
+    transform: scaleX(1);
+  }
+}
+
+/* Earth subtle rotation */
+.planora-logo.animated circle[fill*="earthGradient"] {
+  animation: earthRotation 20s linear infinite;
+  transform-origin: 50px 50px;
+}
+
+@keyframes earthRotation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+/* Hover effects */
+.planora-logo:hover .airplane {
+  animation-duration: 4s;
+}
+
+.planora-logo:hover .orbit-path {
+  stroke: #4A90E2;
+  opacity: 0.8;
+}
+
+/* Responsive sizing */
+.planora-logo svg {
+  width: 100%;
+  height: 100%;
+}
+
+/* Stars twinkling */
+.planora-logo.animated circle[fill="#FFD700"] {
+  animation: starTwinkle 3s ease-in-out infinite;
+}
+
+@keyframes starTwinkle {
+  0%, 100% {
+    opacity: 0.8;
+    transform: scale(1);
+  }
+  50% {
+    opacity: 0.3;
+    transform: scale(0.7);
+  }
+}
+
+/* Different delays for stars */
+.planora-logo.animated circle[fill="#FFD700"]:nth-of-type(1) {
+  animation-delay: 0s;
+}
+
+.planora-logo.animated circle[fill="#FFD700"]:nth-of-type(2) {
+  animation-delay: 1s;
+}
+
+.planora-logo.animated circle[fill="#FFD700"]:nth-of-type(3) {
+  animation-delay: 2s;
+}
+
+.planora-logo.animated circle[fill="#FFD700"]:nth-of-type(4) {
+  animation-delay: 1.5s;
+}

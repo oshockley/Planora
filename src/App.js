@@ -5,6 +5,7 @@ import UserProfile from './features/profile/UserProfile';
 import WeatherWidget from './features/utils/WeatherWidget';
 import CurrencyConverter from './features/utils/CurrencyConverter';
 import TravelTips from './features/utils/TravelTips';
+import PlanoraLogo from './components/PlanoraLogo';
 import './App.css';
 
 function App() {
@@ -86,7 +87,10 @@ function App() {
     <div className="App">
       <div className="app-header">
         <div className="header-content">
-          <h1>Planora</h1>
+          <div className="logo-section">
+            <PlanoraLogo size={50} animated={true} />
+            <h1>Planora</h1>
+          </div>
           <div className="user-info">
             <span>Welcome, {currentUser.username}! ✨</span>
             <button onClick={handleLogout} className="logout-btn">

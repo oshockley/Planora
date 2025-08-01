@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import PlanoraLogo from '../../components/PlanoraLogo';
 import './Auth.css';
 
 const Auth = ({ onAuthSuccess }) => {
@@ -177,7 +178,10 @@ const Auth = ({ onAuthSuccess }) => {
       <div className="auth-background">
         <div className="auth-card">
           <div className="auth-header">
-            <h1>🛫 Planora</h1>
+            <div className="auth-logo">
+              <PlanoraLogo size={80} animated={true} />
+            </div>
+            <h1>Planora</h1>
             <p>AI Itinerary Builder</p>
             <h2>{isLogin ? 'Welcome Back!' : 'Join Planora'}</h2>
             <p className="auth-subtitle">

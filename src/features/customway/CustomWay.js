@@ -3,6 +3,7 @@ import Questionnaire from './Questionnaire';
 import VibeSelector from './VibeSelector';
 import ItineraryBuilder from './ItineraryBuilder';
 import OfflineSupport from './OfflineSupport';
+import PlanoraLogo from '../../components/PlanoraLogo';
 import './CustomWay.css';
 
 const CustomWay = () => {
@@ -127,8 +128,13 @@ const CustomWay = () => {
     <div className="customway-container">
       <div className="customway-header">
         <div className="brand">
-          <h1>🛫 Planora</h1>
-          <p>AI Itinerary Builder</p>
+          <div className="brand-logo">
+            <PlanoraLogo size={60} animated={true} />
+            <div className="brand-text">
+              <h1>Planora</h1>
+              <p>AI Itinerary Builder</p>
+            </div>
+          </div>
         </div>
         
         {renderStepIndicator()}
