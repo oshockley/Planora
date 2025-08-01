@@ -2,6 +2,7 @@
   "name": "planora-travel-app",
   "version": "1.0.0",
   "description": "Planora: AI Itinerary Builder - No more overplanning or Googling, just vibes + AI execution",
+  "homepage": "https://oshockley.github.io/Planora",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.4",
@@ -16,7 +17,9 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,5 +48,8 @@
     "planora"
   ],
   "author": "Planora Team",
-  "license": "MIT"
+  "license": "MIT",
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
 }
