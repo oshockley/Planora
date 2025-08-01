@@ -3,7 +3,7 @@
   position: relative;
 }
 
-.planora-logo.animated .airplane {
+.planora-logo.animated .airplane-orbit {
   animation: orbitRotation 8s linear infinite;
   transform-origin: 50px 50px;
 }
@@ -19,10 +19,11 @@
 /* Airplane orbiting around Earth */
 @keyframes orbitRotation {
   0% {
-    transform: rotate(0deg) translateX(40px) rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    transform: rotate(360deg) translateX(40px) rotate(-360deg);
+    transform: rotate(360deg);
+  }
   }
 }
 
@@ -70,7 +71,7 @@
 }
 
 /* Hover effects */
-.planora-logo:hover .airplane {
+.planora-logo:hover .airplane-orbit {
   animation-duration: 4s;
 }
 

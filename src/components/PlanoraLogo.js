@@ -68,37 +68,39 @@ const PlanoraLogo = ({ size = 60, animated = true }) => {
           className="orbit-path"
         />
         
-        {/* Airplane */}
-        <g className="airplane" transform-origin="50 50">
-          {/* Airplane body */}
-          <path
-            d="M85 45 L92 47 L90 50 L92 53 L85 55 L82 50 Z"
-            fill="url(#planeGradient)"
-            stroke="#FF4500"
-            strokeWidth="0.5"
-          />
-          
-          {/* Wings */}
-          <path
-            d="M82 48 L86 46 L88 50 L86 54 L82 52 Z"
-            fill="url(#planeGradient)"
-            stroke="#FF4500"
-            strokeWidth="0.5"
-          />
-          
-          {/* Tail */}
-          <path
-            d="M85 47 L87 45 L88 47 L87 50 L85 48 Z"
-            fill="#FFD700"
-          />
-          
-          {/* Contrail */}
-          <path
-            d="M82 50 L75 50 Q70 49 65 50 Q70 51 75 50 Z"
-            fill="#E6F3FF"
-            opacity="0.6"
-            className="contrail"
-          />
+        {/* Airplane - positioned to orbit around Earth */}
+        <g className="airplane-orbit">
+          <g className="airplane">
+            {/* Airplane body */}
+            <path
+              d="M88 48 L95 49.5 L93 52 L95 54.5 L88 56 L85 52 Z"
+              fill="url(#planeGradient)"
+              stroke="#FF4500"
+              strokeWidth="0.5"
+            />
+            
+            {/* Wings */}
+            <path
+              d="M85 50 L89 48 L91 52 L89 56 L85 54 Z"
+              fill="url(#planeGradient)"
+              stroke="#FF4500"
+              strokeWidth="0.5"
+            />
+            
+            {/* Tail */}
+            <path
+              d="M88 49.5 L90 47.5 L91 49.5 L90 52 L88 50.5 Z"
+              fill="#FFD700"
+            />
+            
+            {/* Contrail */}
+            <path
+              d="M85 52 L78 52 Q73 51 68 52 Q73 53 78 52 Z"
+              fill="#E6F3FF"
+              opacity="0.6"
+              className="contrail"
+            />
+          </g>
         </g>
         
         {/* Stars */}
